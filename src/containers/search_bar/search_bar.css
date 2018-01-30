@@ -1,0 +1,15 @@
+.search-bar {
+    padding: 1rem 0;
+}
+.search-bar .btn-search {
+    border: solid 1px lightgray;
+
+    border-radius: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.search-bar .btn-search:hover {
+    background-color: lightgray;
+    color: white;
+}
