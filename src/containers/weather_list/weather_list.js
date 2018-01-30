@@ -12,13 +12,13 @@ class WeatherList extends Component {
             <tr key={cityData.city.id}>
                 <td>{cityData.city.name}</td>
                 <td>
-                    <Chart data={temps} />
+                    <Chart data={temps} color="red" units="K" />
                 </td>
                 <td>
-                    <Chart data={pressures} color="green" />
+                    <Chart data={pressures} color="green" units="hPa" />
                 </td>
                 <td>
-                    <Chart data={humidities} color="blue" />
+                    <Chart data={humidities} color="blue" units="%" />
                 </td>
             </tr>
         );
@@ -30,9 +30,9 @@ class WeatherList extends Component {
                 <thead>
                     <tr>
                         <th>City</th>
-                        <th>Temperature</th>
-                        <th>Pressure</th>
-                        <th>Humidity</th>
+                        <th>Temperature (K)</th>
+                        <th>Pressure (hPa) </th>
+                        <th>Humidity (%) </th>
                     </tr>
                 </thead>
                 <tbody>{this.props.weather.map(this.renderWeather)}</tbody>
