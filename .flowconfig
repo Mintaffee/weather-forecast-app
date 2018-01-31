@@ -1,0 +1,15 @@
+[ignore]
+.*/build/.*
+./config/.*
+.*/node_modules/*
+.*/flow-typed/*
+
+[include]
+<PROJECT_ROOT>/src/**/*.js
+
+[libs]
+
+[lints]
+
+[options]
+module.file_ext=.js

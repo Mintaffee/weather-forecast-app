@@ -1,3 +1,5 @@
+// @flow
+
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -5,7 +7,15 @@ import { fetchWeather } from '../../actions/index';
 
 import './search_bar.css';
 
-class SearchBar extends Component {
+type Props = {
+    fetchWeather: string => Object
+};
+
+type State = {
+    term: string
+};
+
+class SearchBar extends Component<Props, State> {
     constructor(props) {
         super(props);
 
@@ -47,7 +57,7 @@ class SearchBar extends Component {
     }
 }
 
-function mapDispatchToProps(dispatch) {
+function mapDispatchToProps(dispatch: any) {
     return bindActionCreators({ fetchWeather }, dispatch);
 }
 

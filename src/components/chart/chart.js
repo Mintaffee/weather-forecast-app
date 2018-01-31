@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import _ from 'lodash';
 import {
@@ -12,7 +13,13 @@ function average(data) {
     return _.round(_.sum(data) / data.length);
 }
 
-export default props => {
+type Props = {
+    data: Object,
+    color: string,
+    units: string
+};
+
+export default (props: Props) => {
     return (
         <div className="chart">
             <Sparklines width={240} height={160} data={props.data}>

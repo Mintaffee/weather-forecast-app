@@ -1,8 +1,13 @@
+// @flow
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Chart from '../../components/chart/chart';
 
-class WeatherList extends Component {
+type Props = {
+    weather: Object
+};
+
+class WeatherList extends Component<Props> {
     renderWeather(cityData) {
         const temps = cityData.list.map(weather => weather.main.temp);
         const pressures = cityData.list.map(weather => weather.main.pressure);
